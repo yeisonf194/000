@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>
+    let persona={
+        nombre:"Carlos",
+        edad:56,
+        apellido:"Mancipe",
+        trabajo:true,
+        musica:["Rock","Pop","Metal","Tropical"],
+        casas:{
+            ciudad:"Tunja",
+            departamento:"Boyaca"
+        },
+        //Siempre que se mete una funcion dentro de un objeto, siempre es una funcion anonima
+        anioNacimiento:function(){
+            return new Date().getFullYear()-this.edad;
+        }
+    }
+    //Dentro de un objeto se pueden crear arreglos y mas obejtos para recorrer objetos o arreglos dentro de un objeto
+    //se hace por medio de un for con el nombre del objeto seguido de un punto y elnombre del arreglo u objeto: persona.musica
+    document.write(`<h2>Tercer elemento del arreglo musica del objeto persona:</h2> ${persona.musica[3]}`);
+    document.write("<ul>Recorriendo el objeto persona")
+    for (const key in persona) {
+        document.write(`<li>${persona[key]}</li>`);
+    }
+    document.write("</ul>");
+    document.write(`<p>Funcion dentro del objeto: ${persona.anioNacimiento}</p>`);
+let musica={
+    reproducir:function(cancion){
+        document.write(`Play=> ${cancion}<br>`);
+    },
+    pausar:function(cancion){
+        document.write(`Paused ${cancion}<br>`);
+    },
+    parar:function(){
+        document.write(`Stop !!! <br>`);
+    }    
+}
+musica.reproducir("Lean on");
+musica.pausar("Lean on");
+musica.parar();
+musica.reproducir("Testimonio");
+musica.parar();
+musica.reproducir("Vida");
+
+
+//Objetos constructores:
+let tarea={
+    nombre:"Apendiendo",
+    tecnologia:"JavaScript"
+}
+console.log(tarea);
+
+//Primera forma de definir un constructor
+function Tarea(nombre,tecnologia){
+    this.nombre=nombre,
+    this.tecnologia=tecnologia
+}
+let fecha= new Date();
+let nTarea= new Tarea("Estudiar","JavaScript");
+console.log(nTarea);
+console.log(nTarea.nombre, nTarea.tecnologia);
+
+//Segunda manera de definir un constructor
+class Tarea3{
+    constructor(ojos,pelo,peso){
+        this.ojos=ojos;
+        this.pelo=pelo;
+        this.peso=peso;
+    }
+}
+let tarea3=new Tarea3("verdes","negro",60);
+console.log(Object.values(tarea3));
+let tarea4=new Tarea3(80,6,60);
+console.log(tarea4);
+
+personas=[
+    {nombre:"Juan",edad:20},
+    {nombre:"Pablo",edad:50},
+    {nombre:"Erica",edad:23},
+    {nombre:"Andres",edad:22}
+]
+console.table(personas);
+const mayores=personas.filter(persona=>persona.edad > 25);
+console.log(mayores);
+const alejandra=personas.find(persona=>persona.nombre ==="Juan");
+console.log(alejandra);
+let total=personas.reduce((edadTotal, persona)=>{return edadTotal+persona.edad},0);
+console.log(total);
+    </script>
+</body>
+</html>

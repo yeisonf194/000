@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validacion</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="formulario">
+        <form action="#" id="formRegister" onsubmit="metFormulario.valFormCompleto()">
+            <p>
+                <input class="validar" type="text" placeholder="Ingrese 2 caracteres, maximo 6. Caracteres Alfabeticos" id="name">
+                <label for="name"><span class="obligatorio">*Campo obligatorio</span></label><p id="infoUser"></p>
+            </p>
+            <p>
+                <input class="validar" type="password" placeholder="Escriba su contraseña con minimo 8 caracteres y debe incuir letras en mayus" id="password">
+                <label for="password"><span class="obligatorio">*Campo obligatorio</span></label><p id="infoPass"></p>
+            </p>
+            <p>
+                <input class="validar" type="email" placeholder="Ingrese correctamente el correo" id="email">
+                <label for="email"><span class="obligatorio">*Campo obligatorio</span></label><p id="infoEmail"></p>
+            </p>
+            <p>
+                <input class="validar" type="date" id="dateIni">
+                <label for="dateIni"><span class="obligatorio">*Campo obligatorio</span></label>
+                <p id="infodate"></p>
+            </p><br><br>
+            <p>Deseas suscribirte al boletin?
+                    <label for="des">Si</label>
+                    <input type="radio" name="des" value="Des" id="boletin1">
+                    <label for="des">No</label>
+                    <input type="radio" name="des" value="Des" id="boletin2">
+                    <span class="infoBoletin"></span>
+            </p><br><br>
+            <p>Cuales son tus intereses?
+                <form action="">
+                    <input type="checkbox" id="opciones1"><label for="opciones1">Artes</label>
+                    <input type="checkbox" id="opciones2"><label for="opciones2">Musica</label>
+                    <input type="checkbox" id="opciones3"><label for="opciones3">Tecnologia</label>
+                    <input type="checkbox" id="opciones4"><label for="opciones4">Juegos</label>
+                    <span class="infoPrefer"></span>
+                </form>
+            </p><br><br>
+            <p>
+                <form action="">
+                        <input type="checkbox" id="opciones"><label for="opciones">Acepto condiciones y restricciones</label>
+                        <span class="infoA"></span>
+                </form>
+            </p>
+            <p>
+                <button onclick="uncheck()">Envia</button>
+                <p class="info"></p>
+            </p>
+        </form>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>

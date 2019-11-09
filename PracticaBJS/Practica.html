@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <div class="Info"></div>
+    <script type="text/javascript">
+
+    /*EJERCICIO 1: Edades
+    for (let x = 0; x < 10; x++) {
+        var age=prompt("Ingrese su edad");
+        while (isNaN(age)) {
+            age=prompt("Ingrese un valor valido");
+        }
+        if (age<18) {
+            break;
+        }
+        document.write("<div>Proceso Finalizado</div");
+    }*/
+
+
+    /*EJERCICIO 2:Sumatoria y Promedio 
+    var sum=0;
+    for (var x = 0; x < 5; x++) {
+        var num=parseInt(prompt("Ingrese un numero"));
+        while (isNaN(num)) {
+            age=prompt("Ingrese un valor valido");
+        }
+        sum=sum+num;
+    }
+    var avg=sum/x;
+    document.write("<p>El promedio es: "+avg+"</p>");*/
+
+
+/*EJERCICIO 4:Multiplos*/
+var y=parseInt(prompt("Ingrese un numero"));
+document.write("<p>Los divisores de: "+y+" son: </p>");
+for (let x = 1; x <= y; x++) {
+    var divisor=(y/x)%2;
+    if (divisor==0) {
+        document.write("<p>"+x+"</p>");
+    }  
+}
+</script>
+</body>
+</html>

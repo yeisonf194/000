@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica</title>
+</head>
+<body>
+    <div id="scor"></div>
+    <script type="text/javascript">
+    // var score=prompt("Ingrese su puntaje");
+    // if (score) {
+    //     document.getElementById('scor').innerHTML=`Su puntaje es ${score}`;  
+    // }
+    // else{
+    //     document.getElementById('scor').innerHTML=`No ingreso ningun puntaje`;
+    // }
+    var dinero=prompt("Ingrese su dinero");
+    var totalCarro=prompt("Ingrese el valor del automovil");
+    if (totalCarro<dinero) {
+        document.write("Pago correcto");
+    }else{
+    var tarjeta=prompt("Ingrese el valor en su tarjeta");
+     if(tarjeta>totalCarro){
+        document.write("Pago correcto");
+    }else{
+        document.write("Fondos insuficientes");
+    }
+    // var time=prompt("Ingrese una hora");
+  
+    // if (time>0 && time<12) {
+    //     document.write(`Buenos dias ${time}`);
+    // } else if (time>=12 && time<18) {
+    //     document.write(`Buenas Tardes ${time}`);
+    // } else if (time>=18 && time<=24) {
+    //     document.write(`Buenas Noches ${time}`);
+    // }
+    // else if (time<1 || time>24) {
+    //     document.write("Hora no valida");
+    // }
+    </script>
+</body>
+</html>

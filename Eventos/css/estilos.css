@@ -1,0 +1,41 @@
+.btnGeneral{
+    background: black;
+    width: 300px;
+    color:white;
+    text-align: center;
+    font-style: bold;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 20px;
+    background:red;
+}
+.center{
+    margin:20px auto;
+}
+.animal{
+    color:#fff;
+    background-color: #ed235d;
+    width: 650px;
+    transition: all 5s ease-out;
+    -webkit-transition: all 5s ease-out;
+    -moz-transition: all 5s ease-out;
+    -o-transition: all 5s ease-out;
+    -ms-transition: all 5s ease-out;
+}
+.animal2{
+    color:#fff;
+    background-color: rgb(138,43,226) ;
+    width: 300px;
+    transition: all 5s ease-out;
+    -webkit-transition: all 5s ease-out;
+    -moz-transition: all 5s ease-out;
+    -o-transition: all 5s ease-out;
+    -ms-transition: all 5s ease-out;
+}
+#btnNombre{
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+}
